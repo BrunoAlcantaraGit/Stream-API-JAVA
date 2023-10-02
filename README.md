@@ -1,6 +1,8 @@
 Ganhando Produtividade com Stream API e Java
 A Streams API traz uma nova opção para a manipulação de coleções em Java seguindo os princípios da programação funcional.
 Stream, trata-se de uma poderosa solução para processar coleções de maneira declarativa, ao invés da tradicional e burocrática forma imperativa.
+
+<pre>
 public class CarrinhoDeCompras {
   //atributos
   private List<Item> itemList;
@@ -23,8 +25,11 @@ public class CarrinhoDeCompras {
     }
   }
 }
+</pre>
 Na forma imperativa, para realizar uma soma simples, por exemplo, o desenvolvedor tem que se preocupar não apenas com o que deve ser feito em cada elemento, isto é, com as regras associadas ao processamento dos elementos da lista, mas também com a maneira de realizar essa iteração.
-public class CarrinhoDeCompras {
+
+<pre>
+  public class CarrinhoDeCompras {
   //atributos
   private List<Item> itemList;
   //construtor
@@ -42,6 +47,8 @@ public class CarrinhoDeCompras {
         .sum();
   }
 }
+</pre>
+
 Combinada com as Expressões Lambda e Method reference, eles proporcionam uma forma diferente de lidar com conjuntos de elementos, oferecendo ao desenvolvedor uma maneira simples e concisa de escrever código que resulta em facilidade de manutenção e paralelização sem efeitos indesejados em tempo de execução.
 As operações na Stream API podem ser classificadas em duas categorias principais:
 Operações Intermediárias: são aquelas que retornam uma nova Stream e permitem encadear várias operações, formando um pipeline de processamento de dados. São elas:
@@ -66,7 +73,9 @@ As expressões lambda permitem representar interfaces funcionais (interfaces com
 As interfaces funcionais desempenham um papel crucial na programação funcional em Java, pois servem de base para o uso de expressões lambda.
 Uma função lambda é uma função sem declaração, isto é, não é necessário colocar um nome, um tipo de retorno e o modificador de acesso. A ideia é que o método seja declarado no mesmo lugar em que será usado.
 As funções lambda em Java tem a sintaxe definida como (argumento) -> (corpo).
-public class OrdenacaoPessoa {
+
+<pre>
+  public class OrdenacaoPessoa {
   //atributo
   private List<Pessoa> pessoaList;
 
@@ -85,10 +94,15 @@ public class OrdenacaoPessoa {
     }
   }
 }
+</pre>
+
 Method Reference
+
 Method Reference é um novo recurso do Java 8 que permite fazer referência a um método ou construtor de uma classe (de forma funcional) e assim indicar que ele deve ser utilizado num ponto específico do código, deixando-o mais simples e legível.
 Para utilizá-lo, basta informar uma classe ou referência seguida do símbolo “::” e o nome do método sem os parênteses no final.
-public class OrdenacaoPessoa {
+
+<pre>
+  public class OrdenacaoPessoa {
   //atributo
   private List<Pessoa> pessoaList;
 
@@ -107,7 +121,7 @@ public class OrdenacaoPessoa {
     }
   }
 }
-Referências
+</pre>
 [1] "Java Stream API - Oracle." Oracle Brasil. Disponível em: https://www.oracle.com/br/technical-resources/articles/java-stream-api.html.
 
 [2] "Java Collections API Examples - cami-la." GitHub. Disponível em: https://github.com/cami-la/collections-java-api-2023.
